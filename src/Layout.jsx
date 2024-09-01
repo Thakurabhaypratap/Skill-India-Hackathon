@@ -7,16 +7,11 @@ import './Layout.css'
 
   const Layout = () => {
     return (
-      <div className="layout">
-        <Header /> {/* Add Header here */}
-        <div className="main-container">
-          <Sidebar /> {/* Add Sidebar here */}
-          <div className="content">
-            <Outlet /> {/* Renders the nested routes */}
-          </div>
-        </div>
-        <Footer /> {/* Add Footer here */}
-      </div>
+      <>
+        <Header /> 
+        <Outlet /> 
+        <Footer /> 
+      </>
     );
   };
   
