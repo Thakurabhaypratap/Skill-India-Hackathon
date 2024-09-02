@@ -12,6 +12,8 @@ import Github, { LoaderPr } from './Components/Github/Github.jsx'
 import BuyAndSell from './Components/BuyAndSell/BuyAndSell.jsx'
 import Issues from './Components/Issues/Issues.jsx'
 import Login from './Components/Login/Login.jsx'
+import Cart from './Components/Cart/Cart.jsx'
+
 
 
 // const router = createBrowserRouter([
@@ -56,6 +58,7 @@ const router = createBrowserRouter(
       <Route path='buyandsell'  element={<BuyAndSell/>}/>
       <Route path='issues'  element={<Issues/> }/>
       <Route path='login'  element={<Login />}/>
+      <Route path='cart'  element={<Cart />}/>
       <Route path='user/:userid'  element={<User/>}/>
       <Route 
       loader = {LoaderPr}

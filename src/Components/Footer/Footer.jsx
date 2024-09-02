@@ -20,7 +20,8 @@ export default function Footer() {
                         <Link to="/" className="flex items-center">
                             <div className="flex items-center">
                                 <span className="text-black text-2xl font-bold mr-2">Kishan</span>
-                                <span className="text-red-600 text-2xl font-bold">Bazaar</span>
+                                <span className="text-red-600 text-2xl font-bold">
+                                Samadhan</span>
                             </div>
                         </Link>
                     </div>

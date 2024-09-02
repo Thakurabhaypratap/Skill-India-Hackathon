@@ -18,13 +18,19 @@ const ImageSlider = () => {
     <div className="slider-container">
       <Slider {...settings}>
         <div>
-          <img src="i.png" alt="Image 1" />
+          <img src="p1.jpg" alt="Image 1" />
         </div>
         <div>
-          <img src="i.png" alt="Image 2" />
+          <img src="p9.jpg" alt="Image 1" />
         </div>
         <div>
-          <img src="i.png" alt="Image 3" />
+          <img src="p8.jpg" alt="Image 1" />
+        </div>
+        <div>
+          <img src="p4.jpg" alt="Image 2" />
+        </div>
+        <div>
+          <img src="p5.jpg" alt="Image 3" />
         </div>
         {/* Add more slides as needed */}
       </Slider>

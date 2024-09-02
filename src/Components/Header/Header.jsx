@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Header() {
   return (
@@ -19,30 +20,8 @@ export default function Header() {
           </Link>
 
 
-          <div className="flex items-center lg:order-2">
-            
-            <Link
-              to="login"
-              className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
-            >
-              Login
-            </Link>
-            
-          </div>
 
-          <div className="flex items-center lg:order-2">
-            
-            <Link
-              to="issues"
-
-            >
-              <div class="w-6 h-6 rounded-full bg-red-300 flex justify-center items-center">
-                <i class="fa-solid fa-question"></i>
-                {/* <i class="fa-solid fa-cloud text-3xl text-gray-900"></i> */}
-              </div>
-            </Link>
-            
-          </div>
+          
 
 
 
@@ -98,9 +77,57 @@ export default function Header() {
                 >
                   ContactUs
                 </NavLink>
+          
               </li>
             </ul>
+
           </div>
+
+
+
+
+
+
+
+          <div className="flex items-center lg:order-2">
+            <Link
+              to="login"
+              className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+            >
+              Login
+            </Link>
+
+
+
+            
+            <Link
+              to="issues"
+
+            >
+              <div class="w-6 h-6 rounded-full bg-red-300 flex justify-center items-center ml-12">
+                
+                ?
+              </div>
+            </Link>
+
+
+
+
+
+
+            <Link
+              to="cart"
+
+            >
+              <div class="w-6 h-6 rounded-full bg-red-300 flex justify-center items-center ml-12">
+              <i class="fa-solid fa-cart-shopping"></i>                
+              </div>
+            </Link>
+            
+          </div>
+
+
+
         </div>
       </nav>
     </header>

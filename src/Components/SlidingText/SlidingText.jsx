@@ -12,8 +12,12 @@ const SlidingText = () => {
           <span className="text-red-600 text-2xl font-bold mr-8">
             "किसानों के सवाल, हमारे समाधान।"
           </span>
-          <span className="text-black text-2xl font-bold">
-            "किसानों के सवाल, हमारे समाधान।"
+          <span className="text-black text-2xl font-bold mr-8">
+          "फसल से लेकर बाजार तक, हर कदम पर साथ।"
+          </span>
+          
+          <span className="text-red-600 text-2xl font-bold">
+          "किसानों के लिए आसान समाधान, बस एक क्लिक की दूरी पर।"
           </span>
         </span>
       </div>

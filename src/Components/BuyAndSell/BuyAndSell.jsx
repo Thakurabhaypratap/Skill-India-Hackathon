@@ -1,94 +1,94 @@
-import React, { useState } from 'react';
+import React from "react";
 
 const BuyAndSell = () => {
-  const [isFormVisible, setFormVisible] = useState(false);
-  const [crop, setCrop] = useState('');
-  const [price, setPrice] = useState('');
-  const [listings, setListings] = useState([]);
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    // Add the new listing to the state
-    setListings([...listings, { crop, price }]);
-    // Reset form
-    setCrop('');
-    setPrice('');
-    setFormVisible(false);
-  };
-
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Buy and Sell</h1>
-      
-      <div className="grid gap-8 md:grid-cols-2">
-        {/* For Sale Section */}
-        <section className="bg-white shadow-md rounded-lg p-6">
-          <h2 className="text-2xl font-semibold mb-4">Items For Sale</h2>
-          <ul className="space-y-4">
-            {listings.map((listing, index) => (
-              <li key={index} className="border-b pb-4">
-                <h3 className="text-xl font-medium">{listing.crop}</h3>
-                <p className="font-bold text-lg">Price: ₹{listing.price} </p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* Wanted Section */}
-        <section className="bg-white shadow-md rounded-lg p-6">
-          <h2 className="text-2xl font-semibold mb-4">Items Wanted</h2>
-          {/* Add your wanted items here */}
-        </section>
-      </div>
-
-      {isFormVisible && (
-        <form onSubmit={handleFormSubmit} className="mt-8 bg-white shadow-md rounded-lg p-6">
-          <h2 className="text-2xl font-semibold mb-4">Add New Listing</h2>
-          <div className="space-y-4">
-            <div>
-              <label htmlFor="crop" className="block text-lg font-medium">Crop</label>
-              <input
-                id="crop"
-                type="text"
-                value={crop}
-                onChange={(e) => setCrop(e.target.value)}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="price" className="block text-lg font-medium">Price</label>
-              <input
-                id="price"
-                type="number"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
-              />
-            </div>
-            <div className="text-center mt-4">
-              <button
-                type="submit"
-                className="px-6 py-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600"
-              >
-                Submit Listing
-              </button>
-            </div>
+    <>
+      <section className="bg-gray-2 dark:bg-dark lg:pb-10 lg:pt-[120px] mx-auto w-full max-w-7xl">
+        <div className="container">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <SingleCard
+              image="1.jpg"
+              CardTitle="50+ Best creative website themes & templates"
+              titleHref="/#"
+              btnHref="/#"
+              CardDescription="Rice is a staple grain, essential for global diets, requiring warm climates, abundant water, and careful cultivation for optimal yield."
+              Button="View Details"
+            />
+            <SingleCard
+              image="2.jpg"
+              CardTitle="Creative Card Component designs graphic elements"
+              CardDescription="Pulses are nutrient-rich crops, including lentils, beans, and peas, offering high protein, fiber, and essential vitamins for a balanced diet."
+              Button="View Details"
+            />
+            <SingleCard
+              image="9.jpg"
+              CardTitle="The ultimate UX and UI guide to card design"
+              CardDescription="Explore various grain crops: wheat, rice, corn, barley, oats, and more. Learn their uses, benefits, and cultivation techniques."
+              Button="View Details"
+            />
+            <SingleCard
+              image="3.jpg"
+              CardTitle="The ultimate UX and UI guide to card design"
+              CardDescription=
+"Wheat crops are essential for global food security, providing a staple source of carbohydrates and nutrients for millions worldwide."
+              Button="View Details"
+            />
+            <SingleCard
+              image="5.jpg"
+              CardTitle="The ultimate UX and UI guide to card design"
+              CardDescription="Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit."
+              Button="View Details"
+            />
+            <SingleCard
+              image="6.jpg"
+              CardTitle="The ultimate UX and UI guide to card design"
+              CardDescription="Lorem ipsum dolor sit amet pretium consectetur adipiscing elit. Lorem consectetur adipiscing elit."
+              Button="View Details"
+            />
           </div>
-        </form>
-      )}
-
-      <div className="text-center mt-8">
-        <button
-          onClick={() => setFormVisible(!isFormVisible)}
-          className="px-6 py-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600"
-        >
-          {isFormVisible ? 'Cancel' : 'Add New Listing'}
-        </button>
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   );
 };
 
 export default BuyAndSell;
+
+const SingleCard = ({
+  image,
+  Button,
+  CardDescription,
+  CardTitle,
+  titleHref,
+  btnHref,
+}) => {
+  return (
+    <>
+      <div className="mb-10 rounded-lg bg-white shadow-1 duration-300 transform hover:scale-105 hover:text-red-400 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3 transition-transform">
+        <img src={image} alt="" className="w-full rounded-t-lg" />
+        <div className="p-1 text-center sm:p-9 md:p-7 xl:p-9">
+          <h3>
+            <a
+              href={titleHref ? titleHref : "/#"}
+              className="-mb-12 block text-xl font-semibold text-dark hover:text-primary dark:text-white sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
+            >
+              {CardTitle}
+            </a>
+          </h3>
+          <p className="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
+            {CardDescription}
+          </p>
+
+          {Button && (
+            <a
+              href={btnHref ? btnHref : "#"}
+              className="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-red-600 dark:border-dark-3 dark:text-dark-6"
+            >
+              {Button}
+            </a>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
