@@ -2,9 +2,9 @@ Here’s a README file template for your Vite project using React Router DOM and
 
 ---
 
-# Kishan Bazzr - Vite Project
+# Kishan Samadhan - Vite Project
 
-Welcome to the **Kishan Bazzr** project! This project is built using Vite, React, React Router DOM, and Tailwind CSS. It aims to create a platform for Indian farmers to buy and sell crops, learn more about farming, and solve farming-related problems.
+Welcome to the **Kishan Samadhan** project! This project is built using Vite, React, React Router DOM, and Tailwind CSS. It aims to create a platform for Indian farmers to buy and sell crops, learn more about farming, and solve farming-related problems.
 
 ## Table of Contents
 
@@ -34,8 +34,8 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/kishan-bazzr.git
-   cd kishan-bazzr
+   git clone https://github.com/yourusername/kishan-Samadhan.git
+   cd kishan-Samadhan
    ```
 
 2. **Install dependencies:**
